@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — EIC³</title>
+  <meta name="description" content="Contactez EIC³ pour une démo de MoveToAI ou MoveToData, ou pour discuter d'un projet d'accompagnement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo-wrap" aria-label="EIC³ accueil">
+        <div class="logo">
+          <span class="logo__eic">EIC</span><span class="logo__cube">³</span>
+        </div>
+      </a>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="movetoai.html" class="nav__link" data-page="movetoai.html">MoveToAI</a>
+        <a href="movetodata.html" class="nav__link" data-page="movetodata.html">MoveToData</a>
+        <a href="accompagnement.html" class="nav__link" data-page="accompagnement.html">Accompagnement</a>
+        <a href="contact.html" class="nav__link nav__cta" data-page="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-hero__title">Contactez-nous</h1>
+      <p class="page-hero__lead">
+        Une question sur nos plateformes ? Un projet d'accompagnement ?
+        Nous revenons vers vous sous 48h ouvrées.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col two-col--contact">
+
+        <!-- FORM -->
+        <div>
+          <p class="section-label">Formulaire de contact</p>
+          <h2 class="section-title" style="margin-bottom:32px;">Décrivez votre projet.</h2>
+
+          <form id="contact-form" novalidate>
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label for="name">Nom complet *</label>
+                <input type="text" id="name" name="name" placeholder="Jean Dupont" autocomplete="name" />
+                <span class="field-error" id="name-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="company">Société *</label>
+                <input type="text" id="company" name="company" placeholder="Acme Corp" autocomplete="organization" />
+                <span class="field-error" id="company-error"></span>
+              </div>
+
+              <div class="form-group form-group--full">
+                <label for="email">Adresse email *</label>
+                <input type="email" id="email" name="email" placeholder="jean.dupont@acme.com" autocomplete="email" />
+                <span class="field-error" id="email-error"></span>
+              </div>
+
+              <div class="form-group form-group--full">
+                <label for="pilier">Pilier concerné *</label>
+                <select id="pilier" name="pilier">
+                  <option value="">— Sélectionnez un pilier —</option>
+                  <option value="movetoai">MoveToAI — Plateforme IA</option>
+                  <option value="movetodata">MoveToData — Plateforme Data</option>
+                  <option value="accompagnement">Accompagnement — Conseil &amp; transition</option>
+                  <option value="autre">Autre / Je ne sais pas encore</option>
+                </select>
+                <span class="field-error" id="pilier-error"></span>
+              </div>
+
+              <div class="form-group form-group--full">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" placeholder="Décrivez votre contexte, vos enjeux ou votre question…"></textarea>
+                <span class="field-error" id="message-error"></span>
+              </div>
+
+              <div class="form-group form-group--full">
+                <button type="submit" class="btn btn--primary" style="width:100%; font-size:1rem; padding:16px;">
+                  Envoyer le message
+                </button>
+              </div>
+
+            </div>
+          </form>
+
+          <div class="form-success" id="form-success">
+            ✓ Message envoyé — nous revenons vers vous sous 48h ouvrées.
+          </div>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div>
+          <p class="section-label">Coordonnées</p>
+          <h2 class="section-title" style="margin-bottom:32px;">EIC³</h2>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-item__icon">📍</div>
+              <div>
+                <p class="contact-item__label">Adresse</p>
+                <p class="contact-item__value">France</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon">✉️</div>
+              <div>
+                <p class="contact-item__label">Email</p>
+                <p class="contact-item__value">contact@eic3.fr</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon">⏱️</div>
+              <div>
+                <p class="contact-item__label">Délai de réponse</p>
+                <p class="contact-item__value">Sous 48h ouvrées</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon">🌐</div>
+              <div>
+                <p class="contact-item__label">GitHub</p>
+                <p class="contact-item__value">github.com/eic3</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- WHAT TO EXPECT -->
+          <div style="margin-top: 48px; background:var(--color-light); border-radius:12px; padding:32px;">
+            <h3 style="font-family:var(--font-heading); color:var(--color-navy); font-size:1.1rem; margin-bottom:20px;">Ce qui se passe ensuite</h3>
+            <div style="display:flex; flex-direction:column; gap:16px;">
+              <div style="display:flex; gap:14px; align-items:flex-start;">
+                <span style="background:var(--color-orange); color:white; font-size:0.75rem; font-weight:700; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">1</span>
+                <p style="font-size:0.9rem; color:var(--color-muted);">Nous lisons votre message et analysons votre contexte.</p>
+              </div>
+              <div style="display:flex; gap:14px; align-items:flex-start;">
+                <span style="background:var(--color-orange); color:white; font-size:0.75rem; font-weight:700; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">2</span>
+                <p style="font-size:0.9rem; color:var(--color-muted);">Un consultant spécialisé vous recontacte sous 48h ouvrées.</p>
+              </div>
+              <div style="display:flex; gap:14px; align-items:flex-start;">
+                <span style="background:var(--color-orange); color:white; font-size:0.75rem; font-weight:700; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">3</span>
+                <p style="font-size:0.9rem; color:var(--color-muted);">Nous organisons un premier échange de 30 min pour qualifier votre besoin.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PLATFORMS QUICK LINKS -->
+          <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="movetoai.html" class="btn btn--outline" style="font-size:0.85rem; padding:10px 18px;">Voir MoveToAI</a>
+            <a href="movetodata.html" class="btn btn--outline" style="font-size:0.85rem; padding:10px 18px;">Voir MoveToData</a>
+            <a href="accompagnement.html" class="btn btn--outline" style="font-size:0.85rem; padding:10px 18px;">Voir l'accompagnement</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="logo footer__logo">
+        <span class="logo__eic">EIC</span><span class="logo__cube">³</span>
+      </div>
+      <p class="footer__copy">© 2025 EIC³. Tous droits réservés.</p>
+      <div class="footer__links">
+        <a href="movetoai.html">MoveToAI</a>
+        <a href="movetodata.html">MoveToData</a>
+        <a href="accompagnement.html">Accompagnement</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Pre-select pilier from URL param
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const pilier = params.get('pilier');
+      if (pilier) {
+        const select = document.getElementById('pilier');
+        if (select) {
+          const opt = select.querySelector(`option[value="${pilier}"]`);
+          if (opt) opt.selected = true;
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
