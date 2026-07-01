@@ -12,29 +12,31 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header__inner">
-      <a href="index.html" class="logo-wrap" aria-label="EIC³ accueil">
-        <div class="logo">
-          <span class="logo__eic">EIC</span><span class="logo__cube">³</span>
-        </div>
-      </a>
-      <button class="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav" aria-label="Navigation principale">
-        <a href="movetoai.html" class="nav__link" data-page="movetoai.html">MoveToAI</a>
-        <a href="movetodata.html" class="nav__link" data-page="movetodata.html">MoveToData</a>
-        <a href="accompagnement.html" class="nav__link" data-page="accompagnement.html">Accompagnement</a>
-        <a href="contact.html" class="nav__link nav__cta" data-page="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <!-- ── LIGNE 1 : Header (position: fixed) ────────────── -->
+  <div class="g-row">
+    <header class="header g-col" style="--g-w: 100">
+      <div class="container header__inner">
+        <a href="index.html" class="logo-wrap" aria-label="EIC³ accueil">
+          <div class="logo">
+            <span class="logo__eic">EIC</span><span class="logo__cube">³</span>
+          </div>
+        </a>
+        <button class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="movetoai.html" class="nav__link" data-page="movetoai.html">MoveToAI</a>
+          <a href="movetodata.html" class="nav__link" data-page="movetodata.html">MoveToData</a>
+          <a href="accompagnement.html" class="nav__link" data-page="accompagnement.html">Accompagnement</a>
+          <a href="contact.html" class="nav__link nav__cta" data-page="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+  </div>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container">
+  <!-- ── LIGNE 2 : Page Hero (1 col) ──────────────────── -->
+  <section class="page-hero g-row">
+    <div class="container g-col" style="--g-w: 100">
       <div class="badges">
         <span class="badge badge--orange">Plateforme opérationnelle</span>
         <span class="badge badge--navy">Brevetée</span>
@@ -52,11 +54,11 @@
     </div>
   </section>
 
-  <!-- PITCH -->
+  <!-- ── LIGNE 3 : Pitch — 2 colonnes ─────────────────── -->
   <section class="section">
     <div class="container">
-      <div class="two-col">
-        <div>
+      <div class="two-col g-row">
+        <div class="g-col" style="--g-w: 50">
           <p class="section-label">La plateforme</p>
           <h2 class="section-title">La donnée au service de la décision.</h2>
           <p style="color:var(--color-muted); font-size:1.05rem; margin-bottom:20px;">
@@ -74,7 +76,7 @@
             et transparence communautaire.
           </p>
         </div>
-        <div style="display:flex; flex-direction:column; gap:16px;">
+        <div class="g-col" style="--g-w: 50; display:flex; flex-direction:column; gap:16px;">
           <div style="background:var(--color-light); border-radius:12px; padding:28px 32px;">
             <div style="font-size:2rem; margin-bottom:12px;">📊</div>
             <h3 style="font-family:var(--font-heading); color:var(--color-navy); font-size:1.1rem; margin-bottom:8px;">Opérationnelle dès le premier jour</h3>
@@ -95,74 +97,82 @@
     </div>
   </section>
 
-  <!-- MODULES -->
+  <!-- ── LIGNE 4 : Intro modules (1 col) ───────────────── -->
   <section class="section section--light">
     <div class="container">
-      <p class="section-label">Couverture fonctionnelle</p>
-      <h2 class="section-title">6 modules pour une Data maîtrisée.</h2>
-      <p class="section-lead">
-        MoveToData couvre l'intégralité du cycle de vie de la donnée,
-        de l'ingestion brute au pilotage stratégique.
-      </p>
-      <div class="feature-list">
-
-        <div class="feature">
-          <div class="feature__icon">📁</div>
-          <div class="feature__body">
-            <h4>Projet Data</h4>
-            <p>Cadrage, gouvernance et pilotage de vos projets Data. Méthodes embarquées pour avancer vite et bien.</p>
-          </div>
+      <div class="g-row">
+        <div class="g-col" style="--g-w: 100">
+          <p class="section-label">Couverture fonctionnelle</p>
+          <h2 class="section-title">6 modules pour une Data maîtrisée.</h2>
+          <p class="section-lead">
+            MoveToData couvre l'intégralité du cycle de vie de la donnée,
+            de l'ingestion brute au pilotage stratégique.
+          </p>
         </div>
+      </div>
 
-        <div class="feature">
-          <div class="feature__icon">🔄</div>
-          <div class="feature__body">
-            <h4>Pipeline Information</h4>
-            <p>Ingestion, intégration et orchestration des flux de données depuis toutes vos sources, en temps réel ou batch.</p>
+      <!-- ── LIGNE 5 : Feature list (1 col, grille CSS interne) ── -->
+      <div class="g-row">
+        <div class="feature-list g-col" style="--g-w: 100">
+
+          <div class="feature">
+            <div class="feature__icon">📁</div>
+            <div class="feature__body">
+              <h4>Projet Data</h4>
+              <p>Cadrage, gouvernance et pilotage de vos projets Data. Méthodes embarquées pour avancer vite et bien.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="feature">
-          <div class="feature__icon">🔧</div>
-          <div class="feature__body">
-            <h4>Transformation</h4>
-            <p>Nettoyage, normalisation et enrichissement de la donnée brute pour la rendre exploitable et fiable.</p>
+          <div class="feature">
+            <div class="feature__icon">🔄</div>
+            <div class="feature__body">
+              <h4>Pipeline Information</h4>
+              <p>Ingestion, intégration et orchestration des flux de données depuis toutes vos sources, en temps réel ou batch.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="feature">
-          <div class="feature__icon">🏗️</div>
-          <div class="feature__body">
-            <h4>Architecture Simplifiée</h4>
-            <p>Un modèle d'architecture Data éprouvé, volontairement simple, adaptable à toute organisation.</p>
+          <div class="feature">
+            <div class="feature__icon">🔧</div>
+            <div class="feature__body">
+              <h4>Transformation</h4>
+              <p>Nettoyage, normalisation et enrichissement de la donnée brute pour la rendre exploitable et fiable.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="feature">
-          <div class="feature__icon">🔮</div>
-          <div class="feature__body">
-            <h4>Prédiction</h4>
-            <p>Modèles prédictifs pré-configurés pour anticiper les tendances, détecter les anomalies et piloter en avance de phase.</p>
+          <div class="feature">
+            <div class="feature__icon">🏗️</div>
+            <div class="feature__body">
+              <h4>Architecture Simplifiée</h4>
+              <p>Un modèle d'architecture Data éprouvé, volontairement simple, adaptable à toute organisation.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="feature">
-          <div class="feature__icon">🎯</div>
-          <div class="feature__body">
-            <h4>Pilotage</h4>
-            <p>Tableaux de bord, KPIs et reporting automatisés pour décider à tous les niveaux de l'organisation.</p>
+          <div class="feature">
+            <div class="feature__icon">🔮</div>
+            <div class="feature__body">
+              <h4>Prédiction</h4>
+              <p>Modèles prédictifs pré-configurés pour anticiper les tendances, détecter les anomalies et piloter en avance de phase.</p>
+            </div>
           </div>
-        </div>
 
+          <div class="feature">
+            <div class="feature__icon">🎯</div>
+            <div class="feature__body">
+              <h4>Pilotage</h4>
+              <p>Tableaux de bord, KPIs et reporting automatisés pour décider à tous les niveaux de l'organisation.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- OPEN SOURCE -->
+  <!-- ── LIGNE 6 : Open Source band — 2 colonnes ───────── -->
   <div class="oss-band">
     <div class="container">
-      <div class="oss-band__inner">
-        <div>
+      <div class="oss-band__inner g-row">
+        <div class="g-col" style="--g-w: 65">
           <p class="section-label" style="color:var(--color-orange);">Open Source</p>
           <h2>Contribuez à MoveToData.</h2>
           <p>
@@ -173,7 +183,7 @@
             de référence pour l'entreprise moderne.
           </p>
         </div>
-        <div class="oss-band__actions">
+        <div class="oss-band__actions g-col" style="--g-w: 35">
           <a href="https://github.com" target="_blank" rel="noopener" class="btn btn--outline-white">
             ★ GitHub
           </a>
@@ -183,12 +193,12 @@
     </div>
   </div>
 
-  <!-- PATENTS -->
+  <!-- ── LIGNE 7 : Brevets — 2 colonnes ────────────────── -->
   <div class="patent-strip">
     <div class="container">
-      <div class="patent-strip__inner">
-        <div class="patent-strip__icon">🔒</div>
-        <div class="patent-strip__text">
+      <div class="patent-strip__inner g-row">
+        <div class="patent-strip__icon g-col" style="--g-w: 10">🔒</div>
+        <div class="patent-strip__text g-col" style="--g-w: 90">
           <h3>Propriété intellectuelle protégée</h3>
           <p>
             L'architecture et les mécanismes innovants de MoveToData sont couverts par des brevets déposés.
@@ -200,38 +210,141 @@
     </div>
   </div>
 
-  <!-- CTA FINAL -->
-  <section style="padding: 80px 0; text-align:center;">
+  <!-- ── LIGNE 8 : CTA final (1 col) ──────────────────── -->
+  <div class="g-row" style="padding: 80px 0; text-align:center;">
     <div class="container">
-      <p class="section-label">Passez à l'action</p>
-      <h2 class="section-title">Voyez MoveToData en situation réelle.</h2>
-      <p style="color:var(--color-muted); max-width:520px; margin: 0 auto 36px; font-size:1.05rem;">
-        Une démonstration sur vos données ou sur un jeu de données représentatif
-        de votre secteur — pour juger sur pièces.
-      </p>
-      <div class="btn-group" style="justify-content:center;">
-        <a href="contact.html?pilier=movetodata" class="btn btn--primary">Demander une démo</a>
-        <a href="movetoai.html" class="btn btn--outline">Voir MoveToAI</a>
+      <div class="g-col" style="--g-w: 100">
+        <p class="section-label">Passez à l'action</p>
+        <h2 class="section-title">Voyez MoveToData en situation réelle.</h2>
+        <p style="color:var(--color-muted); max-width:520px; margin: 0 auto 36px; font-size:1.05rem;">
+          Une démonstration sur vos données ou sur un jeu de données représentatif
+          de votre secteur — pour juger sur pièces.
+        </p>
+        <div class="btn-group" style="justify-content:center;">
+          <a href="contact.html?pilier=movetodata" class="btn btn--primary">Demander une démo</a>
+          <a href="movetoai.html" class="btn btn--outline">Voir MoveToAI</a>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="logo footer__logo">
-        <span class="logo__eic">EIC</span><span class="logo__cube">³</span>
+  <!-- ── LIGNE 9 : Footer (1 col) ──────────────────────── -->
+  <div class="g-row">
+    <footer class="footer g-col" style="--g-w: 100">
+      <div class="container footer__inner">
+        <div class="logo footer__logo">
+          <span class="logo__eic">EIC</span><span class="logo__cube">³</span>
+        </div>
+        <p class="footer__copy">© 2025 EIC³. Tous droits réservés.</p>
+        <div class="footer__links">
+          <a href="movetoai.html">MoveToAI</a>
+          <a href="movetodata.html">MoveToData</a>
+          <a href="accompagnement.html">Accompagnement</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
-      <p class="footer__copy">© 2025 EIC³. Tous droits réservés.</p>
-      <div class="footer__links">
-        <a href="movetoai.html">MoveToAI</a>
-        <a href="movetodata.html">MoveToData</a>
-        <a href="accompagnement.html">Accompagnement</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="assets/js/main.js"></script>
+
+  <!-- ── DEV MODE (Ctrl+Shift+D) ───────────────────────── -->
+  <script>
+  (function () {
+    var devMode  = false;
+    var modified = [];
+
+    function getEffectiveBg(el) {
+      var node = el;
+      while (node && node !== document.documentElement) {
+        var bg = getComputedStyle(node).backgroundColor;
+        if (bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent') return bg;
+        node = node.parentElement;
+      }
+      return 'rgb(255,255,255)';
+    }
+    function luminance(bg) {
+      var m = bg.match(/\d+/g);
+      if (!m) return 1;
+      var f = function(c) { c /= 255; return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
+      return 0.2126 * f(+m[0]) + 0.7152 * f(+m[1]) + 0.0722 * f(+m[2]);
+    }
+    function nearestGRow(el) {
+      var node = el.parentElement;
+      while (node) {
+        if (node.classList && node.classList.contains('g-row')) return node;
+        node = node.parentElement;
+      }
+      return null;
+    }
+
+    function enable() {
+      var pageName = (location.pathname.split('/').pop() || 'movetodata').replace(/\.html?$/i, '') || 'movetodata';
+      var rowIndex = new Map();
+      document.querySelectorAll('.g-row').forEach(function (row, i) { rowIndex.set(row, i + 1); });
+      var cols = Array.from(document.querySelectorAll('.g-col')).map(function (el) {
+        var rect  = el.getBoundingClientRect();
+        var fixed = getComputedStyle(el).position === 'fixed';
+        return { el: el, absTop: Math.round(rect.top + (fixed ? 0 : window.pageYOffset)),
+                 absLeft: Math.round(rect.left + (fixed ? 0 : window.pageXOffset)), rowEl: nearestGRow(el) };
+      });
+      var byRow = new Map();
+      cols.forEach(function (col) {
+        var key = col.rowEl;
+        if (!byRow.has(key)) byRow.set(key, []);
+        byRow.get(key).push(col);
+      });
+      byRow.forEach(function (group, rowEl) {
+        var ri = rowEl ? (rowIndex.get(rowEl) || 0) : 0;
+        group.sort(function (a, b) { return a.absLeft - b.absLeft || a.absTop - b.absTop; });
+        var single = group.length === 1;
+        group.forEach(function (col, ci) { col.devName = pageName + '.' + ri + '.' + (single ? '0' : ci + 1); });
+      });
+      cols.forEach(function (col) {
+        var el    = col.el;
+        var color = luminance(getEffectiveBg(el)) > 0.35 ? '#000000' : '#ffffff';
+        var oldPos = getComputedStyle(el).position;
+        if (oldPos === 'static') el.style.position = 'relative';
+        el.style.outline       = '2px solid ' + color;
+        el.style.outlineOffset = '-1px';
+        function mkLabel(text, extra) {
+          var d = document.createElement('div');
+          d.className = '__dev-overlay';
+          d.textContent = text;
+          d.style.cssText = 'position:absolute;z-index:99999;font:bold 10px/1.3 monospace;color:' + color +
+            ';pointer-events:none;white-space:nowrap;background:transparent;' + extra;
+          el.appendChild(d);
+        }
+        mkLabel('x:' + col.absLeft + '  y:' + col.absTop, 'top:2px;left:4px;');
+        mkLabel(col.devName, 'top:16px;left:50%;transform:translateX(-50%);');
+        modified.push({ el: el, oldPos: oldPos });
+      });
+      var ind = document.createElement('div');
+      ind.id = '__dev-badge';
+      ind.textContent = '⚙ DEV MODE  —  Ctrl+Shift+D pour quitter';
+      ind.style.cssText = 'position:fixed;bottom:14px;right:14px;z-index:999999;background:#111;color:#fff;' +
+        'font:12px/1 monospace;padding:7px 14px;border-radius:5px;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.4);';
+      document.body.appendChild(ind);
+      devMode = true;
+    }
+
+    function disable() {
+      document.querySelectorAll('.__dev-overlay').forEach(function (d) { d.remove(); });
+      var badge = document.getElementById('__dev-badge');
+      if (badge) badge.remove();
+      modified.forEach(function (item) {
+        item.el.style.outline = ''; item.el.style.outlineOffset = '';
+        if (item.oldPos === 'static') item.el.style.position = '';
+      });
+      modified = []; devMode = false;
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.ctrlKey && e.shiftKey && (e.key === 'D' || e.key === 'd')) {
+        e.preventDefault(); devMode ? disable() : enable();
+      }
+    });
+  })();
+  </script>
 </body>
 </html>
