@@ -18,6 +18,12 @@
          colonne = 0 si seule sur la ligne, sinon 1, 2, 3…
        Ajouter un g-row ou un g-col renumérote automatiquement
        tous les suivants au prochain Ctrl+Shift+D.
+
+       --g-align sur un .g-row (lignes multi-colonnes) contrôle
+       l'alignement vertical des colonnes entre elles :
+         center   = colonnes centrées
+         start    = colonnes alignées en haut
+         stretch  = colonnes étirées à hauteur égale (défaut)
   ══════════════════════════════════════════════════════ -->
 
   <!-- ── LIGNE 1 : Header (1 col) ───────────────────── -->
@@ -26,78 +32,106 @@
       <div class="container header__inner">
           <a href="index.html" class="logo-wrap" aria-label="EIC³ accueil">
             <div class="logo">
-              <span class="logo__eic">EIC</span><span class="logo__cube">³</span>
+              <img src="assets/logoeic3.png" alt="EIC³" class="logo__img" />
             </div>
           </a>
           <button class="hamburger" aria-label="Menu" aria-expanded="false">
             <span></span><span></span><span></span>
           </button>
           <nav class="nav" aria-label="Navigation principale">
+            <a href="accompagnement.html" class="nav__link" data-page="accompagnement.html">Accompagnement</a>
             <a href="movetoai.html" class="nav__link" data-page="movetoai.html">MoveToAI</a>
             <a href="movetodata.html" class="nav__link" data-page="movetodata.html">MoveToData</a>
-            <a href="accompagnement.html" class="nav__link" data-page="accompagnement.html">Accompagnement</a>
             <a href="contact.html" class="nav__link nav__cta" data-page="contact.html">Contact</a>
           </nav>
         </div>
     </header>
   </div>
 
-  <!-- ── LIGNE 2 : Hero (1 col) ─────────────────────── -->
+  <!-- ── LIGNE 2 : Hero pretitre (1 col) ───────────────── -->
   <!-- g-row/g-col placés à l'intérieur du hero afin que le bloc
        commence après le padding-top:140px, bien en dessous du header fixe -->
-  <section class="hero">
-    <div class="g-row g-row--flex">
-      <!-- index.2.1 — Texte principal hero  [--g-w = proportion en %, ex: 55 = 55%] -->
-      <div class="g-col" style="--g-w: 65">
-        <p class="hero__label">Conseil et outils en transformation digitale et Management de Transition</p>
-        <h1 class="hero__title">
-          Maîtrisez et Accélérez votre<br>
-          <span>Transformation Digitale des métiers</span><br>
-          en prenant le contrôle<br>
-          de vos processus et de vos données.
-        </h1>
+  <section class="hero" style="padding-bottom: 0">
+    <div class="g-row">
+      <div class="g-col container" style="--g-w: 100">
+        <h1 class="hero__pretitle">Conseil, Réalisation et Accompagnement pour la Transition <br>
+          ou la Transformation de votre activité<br>
+          ──────────────────────  </h1>
+      </div>
+    </div>
+
+    <!-- ── LIGNE 3 : Hero (2 cols) ────────────────────── -->
+    <div class="g-row g-row--flex" style="--g-align: stretch">
+      <!-- index.3.1 — Texte principal hero  [--g-w = proportion en %, ex: 55 = 55%] -->
+      <div class="g-col" style="--g-w: 50">
+        <p class="hero__label">Conseil / Accompagnement</p>
+        <h2 class="hero__title">
+          Transformation Digitale<br>
+        <h3 class="hero__title">
+          Stratégie, méthodes, Outils, Projets.<br>
+          Approche Agile, Gouvernance, Pilotage <br>
+          Développement Applications métier.
+        </h2>
         <p class="hero__lead">
-          Une plateforme dopée à IA pour gérer vos Opportunités, Processus et Projets<br>
-          ainsi qu'une plateforme Data souveraine pour alimenter vos cas d'usage.
+          Conseil sur mesure, gestion du changement<br>
+          Un accompagnement et des outils.
         </p>
       </div>
-      <!-- index.2.2 — Colonne droite hero  [--g-w = proportion en %, ex: 45 = 45%] -->
-      <div class="g-col" style="--g-w: 35">
-        <img src="assets/ledigital.png" alt="Le digital" style="width:100%; border-radius:12px; display:block;" />
+      <!-- index.3.2 — Colonne droite hero  [--g-w = proportion en %, ex: 45 = 45%] -->
+      <div class="g-col" style="--g-w: 50">
+        <p class="hero__label">Plateformes / Outils</p>
+        <h2 class="hero__title">
+          MoveToData<br>
+        <h3 class="hero__title">
+          Data Plateforme tout-en-un<br>
+          Ingestion, Transformation, Stockage<br>
+          Data science (IA), Visualisation <br>
+        </h2>
+        <p class="hero__lead">
+          Création et gestion des pipelines pour alimenter vos cas d'usage. Qualité et fiabilité des données.
+        </p>
       </div>
     </div>
-    <div class="hero__scroll" aria-hidden="true">Scroll</div>
+    <!-- div class="hero__scroll" aria-hidden="true"></div -->
   </section>
 
-  <!-- ── LIGNE 3 : Stats (4 cols) ───────────────────── -->
-  <div class="g-row stats-band">
-    <div class="container">
-      <div class="stats">
-        <div class="g-col stat" style="--g-w: 25">
-          <span class="stat__num">2<span>+</span></span>
-          <span class="stat__label">Plateformes pour les métiers</span>
-        </div>
-        <div class="g-col stat" style="--g-w: 25">
-          <span class="stat__num"><span>&#9632;</span> Souverain</span>
-          <span class="stat__label">SaaS ou on-premise</span>
-        </div>
-        <div class="g-col stat" style="--g-w: 25">
-          <span class="stat__num">Licences <span>2</span></span>
-          <span class="stat__label">Version gratuite ou avancée</span>
-        </div>
-        <div class="g-col stat" style="--g-w: 25">
-          <span class="stat__num">8<span>+</span></span>
-          <span class="stat__label">Domaines d'accompagnement</span>
+  <!-- ── LIGNE 4 : Hero suite (2 cols) ─────────────────── -->
+  <section class="hero" style="padding-top: 0">
+    <div class="g-row g-row--flex" style="--g-align: stretch">
+      <div class="g-col" style="--g-w: 50">
+        <h2 class="hero__title">
+          Management de Transition<br>
+        <h3 class="hero__title">
+          Conseil et accompagnement de votre organisation. 
+          Croissance, projet spécifique ou réorganisation.
+        </h2>
+        <p class="hero__lead">
+          De l'expérience stratégique et opérationnelle au service de vos ambitions.<br>
+        </p>
+        <div style="margin-top: 32px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.2);">
+          <h3 style="color: #ffffff; font-family: var(--font-heading);">PME / ETI / STARTUP</h3>
         </div>
       </div>
+      <div class="g-col" style="--g-w: 50">
+        <h2 class="hero__title">
+          MoveToAI<br>
+        <h3 class="hero__title">
+          Plateforme de Management Digital tout-en-un<br>
+          Processus, Gouvernance, Projet, Valeur.<br>
+          Pilotage intéligent des opportunités.
+        </h2>
+        <p class="hero__lead">
+          Une plateforme de gestion des vos projets et processus.
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- ── Section Nos Piliers (fond blanc) ───────────── -->
   <section class="section">
     <div class="container">
 
-      <!-- LIGNE 4 : Intro piliers (1 col) -->
+      <!-- LIGNE 5 : Intro piliers (1 col) -->
       <div class="g-row">
         <div class="g-col" style="--g-w: 100">
           <p class="section-label">Nos piliers</p>
@@ -109,8 +143,8 @@
         </div>
       </div>
 
-      <!-- LIGNE 5 : Cards piliers (3 cols) -->
-      <div class="cards cards--3 g-row">
+      <!-- LIGNE 6 : Cards piliers (3 cols) -->
+      <div class="cards cards--3 g-row" style="--g-align: stretch">
         <div class="card g-col" style="--g-w: 33">
           <div class="card__icon card__icon--orange">🤖</div>
           <div class="badges">
@@ -157,10 +191,9 @@
           </div>
           <h3 class="card__title">Accompagnement et Conseil</h3>
           <p class="card__text">
-            Management de transition, transformation Digitale, gestion projets stratégiques.
+            Management de transition, Transformation Digitale, gestion projets stratégiques.
             Accompagnbement startup, Management projet développement Digital (Agil)
-            Notre expertise permet d'intervenir sur 8 domaines clés :
-            transformation, croissance, pilotage, énergie, organisation.
+            Une expertise qui permet d'intervenir sur vos domaines métier.
           </p>
           <a href="accompagnement.html" class="card__link">Découvrir l'offre →</a>
         </div>
@@ -173,8 +206,8 @@
   <section class="section section--light">
     <div class="container">
 
-      <!-- LIGNE 6 : Pourquoi (2 cols) -->
-      <div class="two-col g-row">
+      <!-- LIGNE 7 : Pourquoi (2 cols) -->
+      <div class="two-col g-row" style="--g-align: start">
         <div class="g-col" style="--g-w: 50">
           <p class="section-label">Pourquoi EIC³</p>
           <h2 class="section-title">Une approche outils et méthodes adaptée à vos besoins.</h2>
@@ -193,28 +226,28 @@
           <div class="feature">
             <div class="feature__icon">⚡</div>
             <div class="feature__body">
-              <h4>Opérationnelle immédiatement</h4>
-              <p>Les plateformes sont prêtes à être déployées dans votre SI, sans attendre.</p>
+              <h4>Plateformes tout-en-un</h4>
+              <p>Plus de multi-stacks à gérer et administrer. Simplification car toutes les fonctionnalités sont incluses</p>
             </div>
           </div>
           <div class="feature">
             <div class="feature__icon">🔒</div>
             <div class="feature__body">
-              <h4>Propriété intellectuelle protégée</h4>
-              <p>Des brevets déposés garantissent la protection et la pérennité de l'innovation.</p>
+              <h4>Architecture moderne et évolutive</h4>
+              <p>Les plateformes évolent facilement et peuvent intégrer vos demandes et besoins facilement.</p>
             </div>
           </div>
           <div class="feature">
             <div class="feature__icon">🌐</div>
             <div class="feature__body">
-              <h4>Open Source & communauté</h4>
-              <p>Code source disponible sur GitHub. Contribuez et bénéficiez d'un écosystème actif.</p>
+              <h4>Orienté métier</h4>
+              <p>Les plateformes répondent aux besoins des utilisateurs et des décideurs.</p>
             </div>
           </div>
           <div class="feature">
             <div class="feature__icon">🎯</div>
             <div class="feature__body">
-              <h4>Conseil sur mesure d'expérience</h4>
+              <h4>Génère de la Valeur</h4>
               <p>Nous nous intégrons à vos équipes pour garantir l'adoption et la création de valeur.</p>
             </div>
           </div>
@@ -224,7 +257,7 @@
     </div>
   </section>
 
-  <!-- ── LIGNE 7 : CTA (1 col) ──────────────────────── -->
+  <!-- ── LIGNE 9 : CTA (1 col) ──────────────────────── -->
   <div class="g-row cta-band">
     <div class="container text-center">
       <div class="g-col" style="--g-w: 100">
@@ -237,7 +270,7 @@
     </div>
   </div>
 
-  <!-- ── LIGNE 8 : Footer (1 col) ───────────────────── -->
+  <!-- ── LIGNE 10 : Footer (1 col) ──────────────────── -->
   <!-- g-col sur footer.footer directement : getEffectiveBg remonte
        jusqu'au background navy → encadrement blanc correct -->
   <div class="g-row">
