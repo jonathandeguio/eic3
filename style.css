@@ -41,6 +41,7 @@ h1, h2, h3, h4 {
 h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
 h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
 h3 { font-size: clamp(1.15rem, 2vw, 1.5rem); }
+h4 { font-size: clamp(1.4rem, 3vw, 2rem); }
 p { color: var(--color-text); }
 
 /* ===== LAYOUT ===== */
@@ -197,6 +198,7 @@ p { color: var(--color-text); }
 .badge--orange { background: rgba(224,90,43,0.12); color: var(--color-orange); }
 .badge--navy { background: rgba(26,58,107,0.1); color: var(--color-navy); }
 .badge--green { background: rgba(16,150,72,0.1); color: #109648; }
+.badge--white { background: rgba(99, 236, 156, 0.1); color: #fefffd; }
 .badges { margin-bottom: 24px; }
 
 /* ===== HERO ===== */
@@ -279,12 +281,12 @@ p { color: var(--color-text); }
 
 /* ===== PAGE HERO (inner pages) ===== */
 .page-hero {
-  padding-top: 130px;
-  padding-bottom: 72px;
+  padding-top: 100px;
+  padding-bottom: 40px;
   background: linear-gradient(135deg, var(--color-navy) 0%, #1e4a87 100%);
 }
-.page-hero__title { color: var(--color-white); margin-bottom: 16px; }
-.page-hero__lead { color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 580px; }
+.page-hero__title { color: var(--color-white); margin-bottom: 10px; }
+.page-hero__lead { color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 700px; }
 
 /* ===== CARDS ===== */
 .cards { display: grid; gap: 28px; }
