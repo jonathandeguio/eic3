@@ -526,7 +526,7 @@ textarea { resize: vertical; min-height: 140px; }
 .color-orange { color: var(--color-orange); }
 
 /* ===== MOBILE NAV ===== */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .hamburger { display: flex; }
   .nav {
     display: none;
