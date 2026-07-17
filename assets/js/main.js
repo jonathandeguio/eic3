@@ -50,6 +50,23 @@ if (form) {
     });
 
     if (valid) {
+      const name    = document.getElementById('name').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const pilier  = document.getElementById('pilier').value;
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Contact EIC³ — ' + pilier + ' — ' + company);
+      const body    = encodeURIComponent(
+        'Nom : ' + name + '\n' +
+        'Société : ' + company + '\n' +
+        'Email : ' + email + '\n' +
+        'Pilier : ' + pilier + '\n\n' +
+        'Message :\n' + message
+      );
+
+      window.location.href = 'mailto:vincent.deguio@eic3.fr?subject=' + subject + '&body=' + body;
+
       form.style.display = 'none';
       document.getElementById('form-success').style.display = 'block';
     }
