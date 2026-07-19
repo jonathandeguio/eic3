@@ -50,25 +50,34 @@ if (form) {
     });
 
     if (valid) {
-      const name    = document.getElementById('name').value.trim();
-      const company = document.getElementById('company').value.trim();
-      const email   = document.getElementById('email').value.trim();
-      const pilier  = document.getElementById('pilier').value;
-      const message = document.getElementById('message').value.trim();
+      const btn = form.querySelector('[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Envoi en cours…';
 
-      const subject = encodeURIComponent('Contact EIC³ — ' + pilier + ' — ' + company);
-      const body    = encodeURIComponent(
-        'Nom : ' + name + '\n' +
-        'Société : ' + company + '\n' +
-        'Email : ' + email + '\n' +
-        'Pilier : ' + pilier + '\n\n' +
-        'Message :\n' + message
-      );
+      const data = new FormData();
+      data.append('name',    document.getElementById('name').value.trim());
+      data.append('company', document.getElementById('company').value.trim());
+      data.append('email',   document.getElementById('email').value.trim());
+      data.append('pilier',  document.getElementById('pilier').value);
+      data.append('message', document.getElementById('message').value.trim());
 
-      window.location.href = 'mailto:vincent.deguio@eic3.fr?subject=' + subject + '&body=' + body;
-
-      form.style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
+      fetch('send-mail.php', { method: 'POST', body: data })
+        .then(function(res) { return res.json(); })
+        .then(function(json) {
+          if (json.ok) {
+            form.style.display = 'none';
+            document.getElementById('form-success').style.display = 'block';
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Envoyer le message';
+            alert('Une erreur est survenue. Veuillez réessayer.');
+          }
+        })
+        .catch(function() {
+          btn.disabled = false;
+          btn.textContent = 'Envoyer le message';
+          alert('Une erreur est survenue. Veuillez réessayer.');
+        });
     }
   });
 
