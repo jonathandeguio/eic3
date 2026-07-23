@@ -46,7 +46,7 @@ if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$to      = 'contact@eic3.fr';
+$to      = 'vincent.deguio@eic3.fr';
 $subject = '=?UTF-8?B?' . base64_encode('Contact EIC³ — ' . $data['pilier'] . ' — ' . $data['company']) . '?=';
 $body    = "Nom     : {$data['name']}\n"
          . "Société : {$data['company']}\n"
